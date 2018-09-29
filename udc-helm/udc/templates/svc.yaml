@@ -11,6 +11,8 @@ metadata:
     version: {{ .Values.version }}
   name: {{ template "fullname" . }}
 spec:
+  type: LoadBalancer
+  loadBalancerIP: {{ .Values.endpoint }}
   ports:
     - protocol: TCP
       port: 8080

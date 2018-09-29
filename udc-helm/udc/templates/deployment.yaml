@@ -25,15 +25,16 @@ spec:
     spec:
       containers:
         - name: {{ .Values.container.name }}
-          image: '{{ .Values.container.image }}:{{ .Values.version }}'
+          image: '{{ .Values.container.image }}:{{ .Values.container.version }}'
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
               protocol: TCP
           volumeMounts:
             - mountPath: /udc/apps/petclinic/properties
-              name: config-volume
+              name: application-properties
+              readOnly: true
       volumes:
-        - name: config-volume
-          configMap:
-            name: {{ template "fullname" . }}
+        - name: application-properties
+          secret:
+            secretName: udc-application-properties

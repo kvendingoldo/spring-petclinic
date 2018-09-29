@@ -1,10 +1,3 @@
-#.gitignore
-.project
-.sts4-cache/
-_site/
-
-test-output/
-
 # MacOS
 .DS_Store
 
@@ -12,13 +5,14 @@ test-output/
 target/*
 .classpath
 .settings/*
+test-output/
 
 # IDEA
 .idea
 *.iml
 *.log
 
-# vim
+# VIM
 *~
 *.swp
 *.swo
@@ -28,9 +22,12 @@ target/*
 *.swj
 *.swk
 
+# Secrets
+k8s-gcr-auth-ro.json
 
-
-
-
+# Misc
+.project
+.sts4-cache/
+_site/
 
 

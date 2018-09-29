@@ -1,7 +1,9 @@
 container:
   name: udc-backend
-  image: gcr.io/udc-backend-service
+  image: gcr.io/university-course/udc-backend-service
+  credentials: udc-registry
+  version: <VERSION>
 scale:
   maxReplicas: 2
   minReplicas: 1
-version: TODO
+endpoint: 35.205.82.164
