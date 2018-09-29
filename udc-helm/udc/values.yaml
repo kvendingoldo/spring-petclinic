@@ -1,6 +1,7 @@
 container:
   name: udc-backend
-  image: gcr.io/TODO
+  image: gcr.io/udc-backend-service
 scale:
-  maxReplicas: 3
+  maxReplicas: 2
   minReplicas: 1
+version: TODO

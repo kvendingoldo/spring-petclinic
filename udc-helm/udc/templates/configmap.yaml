@@ -5,7 +5,7 @@ metadata:
   labels:
     component: {{ template "name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version }}
-    environment: {{ .Values.global.environment }}
+    environment: {{ .Values.environment }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
   name: {{ template "fullname" . }}

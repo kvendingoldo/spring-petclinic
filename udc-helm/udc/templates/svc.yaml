@@ -5,10 +5,10 @@ metadata:
   labels:
     component: {{ template "name" . }}
     chart: {{ .Chart.Name }}
-    environment: {{ .Values.global.environment }}
+    environment: {{ .Values.environment }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
-    version: {{ .Values.global.version }}
+    version: {{ .Values.version }}
   name: {{ template "fullname" . }}
 spec:
   ports:
@@ -18,6 +18,6 @@ spec:
   selector:
     component: {{ template "name" . }}
     chart: {{ .Chart.Name }}
-    environment: {{ .Values.global.environment }}
+    environment: {{ .Values.environment }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}

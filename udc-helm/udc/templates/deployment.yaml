@@ -5,10 +5,10 @@ metadata:
   labels:
     component: {{ template "name" . }}
     chart: {{ .Chart.Name }}
-    environment: {{ .Values.global.environment }}
+    environment: {{ .Values.environment }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
-    version: {{ .Values.global.version }}
+    version: {{ .Values.version }}
   name: {{ template "fullname" . }}
 spec:
   replicas: 1
@@ -17,15 +17,15 @@ spec:
       labels:
         component: {{ template "name" . }}
         chart: {{ .Chart.Name }}
-        environment: {{ .Values.global.environment }}
+        environment: {{ .Values.environment }}
         heritage: {{ .Release.Service }}
         release: {{ .Release.Name }}
-        version: {{ .Values.global.version }}
+        version: {{ .Values.version }}
       name: {{ template "fullname" . }}
     spec:
       containers:
         - name: {{ .Values.container.name }}
-          image: '{{ .Values.container.image }}:{{ .Values.global.version }}'
+          image: '{{ .Values.container.image }}:{{ .Values.version }}'
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
