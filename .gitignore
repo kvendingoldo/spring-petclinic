@@ -6,6 +6,7 @@ target/*
 .classpath
 .settings/*
 test-output/
+*.releaseBackup
 
 # IDEA
 .idea
