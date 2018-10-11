@@ -25,7 +25,7 @@
         <docker.skip.build>true</docker.skip.build>
         <docker.skip.push>true</docker.skip.push>
         <docker.baseImage>openjdk:8-jre</docker.baseImage>
-        <docker.repository>university-course</docker.repository>
+        <docker.repository>university-course/dev</docker.repository>
         <docker.registry.host>localhost</docker.registry.host>
 
         <!-- Docker CLI executable -->
