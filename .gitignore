@@ -7,6 +7,7 @@ target/*
 .settings/*
 test-output/
 *.releaseBackup
+*.versionsBackup
 
 # IDEA
 .idea
@@ -30,5 +31,3 @@ k8s-gcr-auth-ro.json
 .project
 .sts4-cache/
 _site/
-
-
