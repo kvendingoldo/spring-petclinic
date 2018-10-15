@@ -4,6 +4,6 @@ container:
   credentials: udc-registry
   version: <VERSION>
 scale:
-  maxReplicas: 2
+  maxReplicas: 1
   minReplicas: 1
-endpoint: 35.205.82.164
+endpoint: <ENDPOINT>

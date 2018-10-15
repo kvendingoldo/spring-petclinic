@@ -30,11 +30,15 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
+          {{- if eq .Release.Name "production"}}
           volumeMounts:
             - mountPath: /udc/apps/petclinic/properties
               name: application-properties
               readOnly: true
+          {{- end}}
+      {{- if eq .Release.Name "production"}}
       volumes:
         - name: application-properties
           secret:
             secretName: udc-application-properties
+      {{- end}}
